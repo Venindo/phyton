@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Cosmic Canvas Creations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <custom-navbar></custom-navbar>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="galery/1.jpg" class="card-img-top" alt="Cosmic Art 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Celestial Harmony</h5>
+                            <p class="card-text">A mesmerizing blend of cosmic colors and patterns.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="galery/2.jpg" class="card-img-top" alt="Cosmic Art 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Stellar Dreams</h5>
+                            <p class="card-text">Vibrant cosmic energy captured in digital form.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="galery/3.jpg" class="card-img-top" alt="Cosmic Art 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Galactic Whirl</h5>
+                            <p class="card-text">Spiraling cosmic patterns that draw you in.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="galery/4.jpg" class="card-img-top" alt="Cosmic Art 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Nebula Vision</h5>
+                            <p class="card-text">Ethereal cosmic clouds in stunning detail.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="galery/5.jpg" class="card-img-top" alt="Cosmic Art 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Cosmic Flow</h5>
+                            <p class="card-text">Fluid cosmic energy in motion.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="galery/6.jpg" class="card-img-top" alt="Cosmic Art 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Astral Portal</h5>
+                            <p class="card-text">A gateway to cosmic dimensions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="galery/7.jpg" class="card-img-top" alt="Cosmic Art 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Cosmic Explosion</h5>
+                            <p class="card-text">Vibrant cosmic energy bursting forth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+    </section>
+    <script src="components/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Add animation to gallery items
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.card');
+            galleryItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
